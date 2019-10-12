@@ -1,5 +1,7 @@
 {
   "name": "AgrconnectMobile",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
