@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'service-digi', loadChildren: './pages/service-digi/service-digi.module#ServiceDigiPageModule' },
   { path: 'meteo', loadChildren: './pages/meteo/meteo.module#MeteoPageModule' },
   { path: 'conseil', loadChildren: './pages/conseil/conseil.module#ConseilPageModule' },
+  { path: 'annonce-detaille', loadChildren: './pages/annonce-detaille/annonce-detaille.module#AnnonceDetaillePageModule' },
 
 ];
 

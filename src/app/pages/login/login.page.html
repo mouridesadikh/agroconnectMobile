@@ -1,9 +1,57 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+<ion-content class="background">
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card id="login">
 
+          <p>{{message}}</p>
+          <form [formGroup]="loginform">
+            <ion-item>
+              <ion-label position="floating">Username <ion-text color="danger">*</ion-text>
+              </ion-label>
+              <ion-input required formControlName="email" type="text" ></ion-input>
+              <h3 class="error_messages">
+                <ng-container *ngFor="let error of  error_messages.email">
+                  <h3 class="error_messages"
+                    *ngIf="loginform.get('email').hasError(error.type) && (loginform.get('email').dirty ) ">
+                    <p style="font-size: 10px">{{error.message}}</p>
+                  </h3>
+                </ng-container>
+              </h3>
+
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Password <ion-text color="danger">*</ion-text>
+              </ion-label>
+              <ion-input required formControlName="password" type="password"></ion-input>
+              <h3 class="error_messages">
+                <ng-container *ngFor="let error of  error_messages.password">
+                  <h3 class="error_messages"
+                    *ngIf="loginform.get('password').hasError(error.type) && (loginform.get('password').dirty || loginform.get('password').touched) ">
+                    <p style="font-size: 11px">{{error.message}}</p>
+                  </h3>
+                </ng-container>
+
+              </h3>
+            </ion-item>
+
+            <ion-button expand="full" fill="solid" (click)="onConnexion()" shap="round" color="succes" type="button"
+              [disabled]="loginform.invalid">
+              connexion
+            </ion-button>
+            <ion-button expand="full" fill="solid" (click)="incription()" shap="round" color="succes" type="button"></ion-button>
+              S'inscrire
+            </ion-button>
+          </form>
+
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
 </ion-content>
+<ion-footer text-center no-border transparent>
+  <p style="font-size: 10px">copyright &copy; 2019 BPO<p>
+
+</ion-footer>

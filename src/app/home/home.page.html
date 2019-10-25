@@ -1,73 +1,60 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="success">
     <ion-title>
-      Ionic Blank
+      Agroconnect
     </ion-title>
+    <ion-icon  style="zoom: 2.0" slot="end" name="add">Logout</ion-icon>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="background">
   <div class="ion-padding">
       <ion-grid>
-          <!--  <ion-row>
-             <ion-col col-6>
-               <button ion-button outline icon-start (click)="goToSceanceCours()">
-                 <ion-icon name='briefcase' is-active="false"></ion-icon>
-                 Sceances de Cours
-               </button>
-             </ion-col>
-             <ion-col col-6> <button ion-button outline icon-start (click)="goToProgrammerDevoir()">
-               <ion-icon name='briefcase' is-active="false"></ion-icon>
-               Programmer devoir
-             </button></ion-col>
-           </ion-row>
+        
            <ion-row>
-             <ion-col col-6>
-               <button ion-button outline icon-start (click)="goToNoterEleve()">
-                 <ion-icon name='briefcase' is-active="false"></ion-icon>
-                Noter Eleve
-               </button>
-             </ion-col>
-             <ion-col col-6>
-               <button ion-button outline icon-start (click)="goToParametre()">
-                 <ion-icon name='briefcase' is-active="false"></ion-icon>
-                 Parametre
-               </button>
-             </ion-col>
-           </ion-row> -->
-           <ion-row><br><br>
              <ion-col col-12>
                <ion-grid>
                    <ion-row>
        
                      <ion-col col-6>
                          <ion-card>
-                             <!--img src='assets/sc/professeur/cours.png' alt="" (click)="goToSceanceCours()"-->
-                            <ion-card-content>Marché virtuel</ion-card-content>
+                             <img src='../../assets/img/marche.jpg' alt="" (click)="gotToMarcheVirtuel()">
+                          
                          </ion-card>
                        </ion-col>
                      <ion-col col-6>
                          <ion-card>
-                             <!--img src='assets/sc/professeur/evaluation.png' alt="" (click)="goToProgrammerDevoir()"-->
-                            <ion-card-content>Coopération<br></ion-card-content>
-                         </ion-card></ion-col>
+                           <img src='../../assets/img/cooperative.jpg' alt="" (click)="goToCooperative()">
+                
+                         </ion-card>
+                    </ion-col>
        
                    </ion-row><br><br>
                    <ion-row>
                      <ion-col col-6>
                          <ion-card>
-                             <!--img src="assets/sc/professeur/devoir.png" alt=""(click)="goToNoterEleve()"-->
-                            <ion-card-content>Services<br></ion-card-content>
+                             <img src="../../assets/img/service.jpg" alt="" (click)="goToService()">
                          </ion-card>
                         </ion-col>
                      <ion-col col-6>
                          <ion-card>
-                             <!--img src="assets/sc/professeur/setting.png" alt=""(click)="goToParametre()"-->
-                            <ion-card-content>Météo<br></ion-card-content>
+                             <img src="../../assets/img/meteo.jpg" alt="" (click)="goToMeteo">
+                           
                          </ion-card>
                        </ion-col>
        
                    </ion-row>
+                   <ion-row>
+                      
+                        
+                      <ion-col col-6>
+                          <ion-card>
+                              <img src="../../assets/img/conseil.jpg" alt="" (click)="goToConseil()">
+                      
+                          </ion-card>
+                        </ion-col>
+        
+                  </ion-row>
              </ion-grid>
              </ion-col>
            </ion-row>

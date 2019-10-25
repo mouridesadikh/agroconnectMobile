@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private route : Router) {}
 
+
+
+  gotToMarcheVirtuel(){
+    this.route.navigateByUrl('marche-virtuel');
+    
+  }
+  goToCooperative()
+  {
+    this.route.navigateByUrl('cooperative');
+  }
 }

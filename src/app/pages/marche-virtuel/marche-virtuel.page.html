@@ -1,9 +1,114 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>marcheVirtuel</ion-title>
+   
+  <ion-toolbar  color="success">
+      <ion-buttons slot="start">
+          <ion-icon  style="zoom: 1.7" name="arrow-round-back"></ion-icon>
+      </ion-buttons>
+    <ion-title>Marché Virtuel</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="background">
+  <div>
+      <ion-row  class="shadow" style="background-color: #fff ">
+        <ion-col size="6">
+          <ion-item>
+            <label  style="color: #fff;" for="">Domaine</label>
+            <ion-select multiple="true" placeholder="">
+              <ion-select-option value="peperoni">Peperoni</ion-select-option>
+              <ion-select-option value="hawaii">Hawaii</ion-select-option>
+            </ion-select>
+          </ion-item>
+          </ion-col>
+          <ion-col size="6">
+              <ion-item>
+                  <label  style="color: #fff;" for="">Catégorie</label>
+            <ion-select multiple="true" placeholder="">
+              <ion-select-option value="peperoni">Peperoni</ion-select-option>
+              <ion-select-option value="hawaii">Hawaii</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      
+      </ion-row>
+      <ion-row   class="shadow" style="background-color: #fff">
+        <ion-col size="12">
+          <ion-card>
+            <ion-card-header>
+              <ion-row justify-content-between>
+                <ion-col col-auto>
+                  <img src="../../assets/img/arachide.jpg" item-left />
+                </ion-col>
+                <ion-col>
+                  <ion-row text-wrap>
+                    <ion-item>Categorie</ion-item>
+                    <ion-item>Quantité </ion-item><ion-item>prix </ion-item>
+                  </ion-row>
+                  <ion-row text-wrap>
+                    <p>Date  12/0/2019</p>
+                   <ion-button (click)="openAnnonce()" color="success">
+                     <ion-icon slot="icon-only"  style="zoom: 0" name="add"></ion-icon>
+                   </ion-button>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row   class="shadow" style="background-color: #fff">
+          <ion-col size="12">
+            <ion-card>
+              <ion-card-header>
+                <ion-row justify-content-between>
+                  <ion-col col-auto>
+                    <img src="../../assets/img/arachide.jpg" item-left />
+                  </ion-col>
+                  <ion-col>
+                      <ion-row text-wrap>
+                        <ion-item>Categorie</ion-item>
+                        <ion-item>Quantité </ion-item><ion-item>prix </ion-item>
+                      </ion-row>
+                      <ion-row text-wrap>
+                        <p>Date  12/0/2019</p>
+                       <ion-button (click)="onClick()" color="success">
+                         <ion-icon slot="icon-only"  style="zoom: 0" name="add"></ion-icon>
+                       </ion-button>
+                      </ion-row>
+                    </ion-col>
+                </ion-row>
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row   class="shadow" style="background-color: #fff">
+            <ion-col size="12">
+              <ion-card>
+                <ion-card-header>
+                  <ion-row justify-content-between>
+                    <ion-col col-auto>
+                      <img src="../../assets/img/arachide.jpg" item-left />
+                    </ion-col>
+                    <ion-col>
+                        <ion-row text-wrap>
+                          <ion-item>Categorie</ion-item>
+                          <ion-item>Quantité </ion-item><ion-item>prix </ion-item>
+                        </ion-row>
+                        <ion-row text-wrap>
+                          <p>Date  12/0/2019</p>
+                         <ion-button (click)="onClick()" color="success">
+                           <ion-icon slot="icon-only"  style="zoom: 0" name="add"></ion-icon>
+                         </ion-button>
+                        </ion-row>
+                      </ion-col>
+                  </ion-row>
+                </ion-card-header>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+       
+  </div>
+ 
 
 </ion-content>

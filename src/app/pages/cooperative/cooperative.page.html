@@ -1,9 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>cooperative</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+    <ion-toolbar color="success">
+      <ion-title>
+        Agroconnect
+      </ion-title>
+      <ion-icon  style="zoom: 2.0" slot="end" name="add">Logout</ion-icon>
+    </ion-toolbar>
+  </ion-header>
+  
 <ion-content>
+ 
+  <ion-row>
+    <ion-col size="12">
+        <ion-list>
 
+                  <ion-item>
+                      <ion-label>Nom : </ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Zone : </ion-label>
+                    </ion-item>
+                    <ion-button  expand="full" fill="solid" color="success"  shap="round" (click)="onClick()" style="background-color :#84BF2C;">
+                      Adhérer
+                    </ion-button>
+         
+        </ion-list>
+    </ion-col>
+  </ion-row>
 </ion-content>
