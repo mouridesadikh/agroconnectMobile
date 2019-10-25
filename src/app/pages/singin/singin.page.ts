@@ -46,8 +46,7 @@ export class SinginPage implements OnInit {
       { type: 'maxLength', message: 'le mot de passe doit inférieur à 18' }
      ]
    };
-   constructor(public formbuiler: FormBuilder, private router: Router
-     , private storage: Storage) {
+   constructor(public formbuiler: FormBuilder, private router: Router) {
 
 
      this.inscriptionform = this.formbuiler.group({

@@ -1,16 +1,19 @@
-
-<ion-content class="background">
+<ion-content class="background" padding>
+  <!-- <img src="./assets/img/Hill-Smart.jpg" alt="logo" class="imglogo" > -->
   <ion-grid no-padding>
-    <ion-row>
-      <ion-col size="12">
-        <ion-card id="login">
 
-          <p>{{message}}</p>
+    <ion-row justify-content-center>
+      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+        <img src="" alt="logo" class="imglogo">
+        <br> <br><br> <br>
+       
           <form [formGroup]="loginform">
             <ion-item>
               <ion-label position="floating">Username <ion-text color="danger">*</ion-text>
               </ion-label>
               <ion-input required formControlName="email" type="text" ></ion-input>
+            
+            </ion-item>
               <h3 class="error_messages">
                 <ng-container *ngFor="let error of  error_messages.email">
                   <h3 class="error_messages"
@@ -20,11 +23,11 @@
                 </ng-container>
               </h3>
 
-            </ion-item>
             <ion-item>
               <ion-label position="floating">Password <ion-text color="danger">*</ion-text>
               </ion-label>
               <ion-input required formControlName="password" type="password"></ion-input>
+            </ion-item>
               <h3 class="error_messages">
                 <ng-container *ngFor="let error of  error_messages.password">
                   <h3 class="error_messages"
@@ -34,24 +37,21 @@
                 </ng-container>
 
               </h3>
-            </ion-item>
+          
 
-            <ion-button expand="full" fill="solid" (click)="onConnexion()" shap="round" color="succes" type="button"
-              [disabled]="loginform.invalid">
-              connexion
-            </ion-button>
-            <ion-button expand="full" fill="solid" (click)="incription()" shap="round" color="succes" type="button"></ion-button>
-              S'inscrire
-            </ion-button>
-          </form>
-
-        </ion-card>
-      </ion-col>
-
+            <ion-button id="btnLogin" expand="full" fill="solid" (click)="onConnexion()" shape="round" color="success" type="button"
+            [disabled]="loginform.invalid">
+            connexion
+          </ion-button>
+            <ion-button id="btnLogin" expand="full" fill="solid" (click)="oninscription()" shape="round"  color="success"  type="button"
+            [disabled]="loginform.invalid">
+            S'inscrire
+          </ion-button>
+        </form>
+        </ion-col>
     </ion-row>
-  </ion-grid>
-</ion-content>
-<ion-footer text-center no-border transparent>
-  <p style="font-size: 10px">copyright &copy; 2019 BPO<p>
-
-</ion-footer>
+    </ion-grid>
+  </ion-content>
+  <ion-footer text-center no-border transparent>
+    <p style="font-size: 10px">copyright &copy; 2019 DIGI221</p>
+  </ion-footer>

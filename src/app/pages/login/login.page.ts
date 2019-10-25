@@ -44,7 +44,7 @@ export class LoginPage implements OnInit {
       ]))
     });
   }
-  incription()
+  oninscription()
   {
     this.router.navigateByUrl('singin');
   }

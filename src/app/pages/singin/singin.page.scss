@@ -1,18 +1,51 @@
-#inscription{
-    margin-top: 50%;
-    margin-bottom: 50%;
+
+$height100: 90%;
+@media (min-width: 240px) and (max-width: 768px) {
+    ion-grid {
+        //background: $white-color;
+    }
+    ion-col {
+      //  border: none;
+    }
+}
+input[type=email],[type=password]
+{
+    font-size: 14px;
+    border-radius: 10px 10px 10px 10px;
+    //height: 20%;
 }
 
 
-ion-content.background{
-    --background-color: green;
-}
-
-
-// ion-card {
-//     border: 1px solid #eee8d5;
-//     background-color: #eee8d5;
+ion-grid {
+ width:90%;
+      height: $height100;
+    //  background: #dfdfdf;
+  }
+  ion-label{
+    font-size: 13px;
+  }
+  
+  ion-row {
+      height: $height100;
+      
+  }
  
-//     border-radius: 10px 10px 10px 10px;
-//     }
+ion-content.background{
+    //--background: url(../../../assets/img/cesarunsplash.jpg) 0 0/100% 100% no-repeat;
+    background-size: cover;
+    text-align: center;
     
+}
+ion-footer {
+    background-color: #a0a6a2;
+    color: beige;
+}
+img{
+  margin-top: 15%;
+}
+ion-grid{
+ // margin-bottom: 40%;
+}
+#btnLogin{
+  font-size: 20px;
+}
