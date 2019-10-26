@@ -31,18 +31,19 @@
         </ion-col>
       
       </ion-row>
-      <ion-row   class="shadow" style="background-color: #fff">
+      <ion-row *ngFor ="let annonce of annonces" class="shadow" style="background-color: #fff">
         <ion-col size="12">
-          <ion-card>
+          
+          <ion-card  >
             <ion-card-header>
               <ion-row justify-content-between>
                 <ion-col col-auto>
-                  <img src="../../assets/img/arachide.jpg" item-left />
+                  <img src="http://127.0.0.1:8000/categorie/{{ annonce.produit.image }}" item-left />
                 </ion-col>
                 <ion-col>
                   <ion-row text-wrap>
-                    <ion-item>Categorie</ion-item>
-                    <ion-item>Quantité </ion-item><ion-item>prix </ion-item>
+                    <ion-item>Categorie: {{ annonce.produit.sousCategorie.libelle}}</ion-item>
+                    <ion-item>Quantité{{ annonce.quantite}} </ion-item><ion-item>prix: {{ annonce.prix_unitaire}} </ion-item>
                   </ion-row>
                   <ion-row text-wrap>
                     <p>Date  12/0/2019</p>
@@ -57,56 +58,7 @@
         </ion-col>
       </ion-row>
 
-      <ion-row   class="shadow" style="background-color: #fff">
-          <ion-col size="12">
-            <ion-card>
-              <ion-card-header>
-                <ion-row justify-content-between>
-                  <ion-col col-auto>
-                    <img src="../../assets/img/arachide.jpg" item-left />
-                  </ion-col>
-                  <ion-col>
-                      <ion-row text-wrap>
-                        <ion-item>Categorie</ion-item>
-                        <ion-item>Quantité </ion-item><ion-item>prix </ion-item>
-                      </ion-row>
-                      <ion-row text-wrap>
-                        <p>Date  12/0/2019</p>
-                       <ion-button (click)="onClick()" color="success">
-                         <ion-icon slot="icon-only"  style="zoom: 0" name="add"></ion-icon>
-                       </ion-button>
-                      </ion-row>
-                    </ion-col>
-                </ion-row>
-              </ion-card-header>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-        <ion-row   class="shadow" style="background-color: #fff">
-            <ion-col size="12">
-              <ion-card>
-                <ion-card-header>
-                  <ion-row justify-content-between>
-                    <ion-col col-auto>
-                      <img src="../../assets/img/arachide.jpg" item-left />
-                    </ion-col>
-                    <ion-col>
-                        <ion-row text-wrap>
-                          <ion-item>Categorie</ion-item>
-                          <ion-item>Quantité </ion-item><ion-item>prix </ion-item>
-                        </ion-row>
-                        <ion-row text-wrap>
-                          <p>Date  12/0/2019</p>
-                         <ion-button (click)="onClick()" color="success">
-                           <ion-icon slot="icon-only"  style="zoom: 0" name="add"></ion-icon>
-                         </ion-button>
-                        </ion-row>
-                      </ion-col>
-                  </ion-row>
-                </ion-card-header>
-              </ion-card>
-            </ion-col>
-          </ion-row>
+    
        
   </div>
  
