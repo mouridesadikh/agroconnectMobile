@@ -13,15 +13,34 @@
     <ion-col size="12">
         <ion-list>
 
-                  <ion-item>
-                      <ion-label>Nom : </ion-label>
+            <ion-card *ngFor="let cooperative of cooperatives ">
+                <ion-card-content color="light">
+            
+                  <ion-row>
+                    <ion-col  style="text-align: center;">
+                    <ion-item>
+                        
+                        <ion-icon color="dark" name="person" slot="start"></ion-icon>
+                        <b>Nom :  </b> {{ cooperative.user.name}}
+                    </ion-item>
+                 
+                    <ion-item>
+                        <ion-icon color="dark" name="pin" slot="start"></ion-icon>
+                        <b>Zone :  </b>  {{ cooperative.user.adresse}}
                     </ion-item>
                     <ion-item>
-                        <ion-label>Zone : </ion-label>
+                      
+                        <ion-icon color="dark" name="call" slot="start"></ion-icon>
+                        <b> Téléphone :  </b>  {{ cooperative.user.telephone}}
                     </ion-item>
-                    <ion-button  expand="full" fill="solid" color="success"  shap="round" (click)="onClick()" style="background-color :#84BF2C;">
-                      Adhérer
-                    </ion-button>
+                    </ion-col>
+                  </ion-row>
+                  <ion-button  expand="full" fill="solid"  shape="round" color="success" type="button">
+                   Adhérer
+                   </ion-button>
+                
+                </ion-card-content>
+              </ion-card>
          
         </ion-list>
     </ion-col>

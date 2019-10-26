@@ -19,4 +19,15 @@ export class HomePage {
   {
     this.route.navigateByUrl('cooperative');
   }
+  goToService()
+  {
+    this.route.navigateByUrl('service-digi');
+  }
+  goToMeteo()
+  {
+    this.route.navigateByUrl('meteo');
+  }
+  goToConseil(){
+    this.route.navigateByUrl('conseil');
+  }
 }

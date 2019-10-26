@@ -1,9 +1,39 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>conseil</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+    <ion-toolbar color="success">
+      <ion-title>
+        Conseil
+      </ion-title>
+      <ion-icon  style="zoom: 2.0" slot="end" name="log-out"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+     <ion-row>
+       <ion-col size="12">
+          <ion-searchbar placeholder="recherche" inputmode="email" type="decimal" (ionChange)="onSearchChange($event)" [debounce]="250"></ion-searchbar>
+       </ion-col>
+       <ion-col>
+          <ion-list>
+              <ion-card *ngFor="let conseil of conseils">
+                  <img src="http://127.0.0.1:8000/categorie/{{conseil.image}}"/>
+                  <ion-card-content color="light">
+              
+                    <ion-row>
+                      <ion-col  style="text-align: center;">
+                     
+                      <b> {{conseil.titre}} </b>
+                      <b> {{conseil.description}} </b>
+                      </ion-col>
+                    </ion-row>
+                    
+                    <ion-item>
+                        <ion-button color="dark" fill="outline"  (click)="openAnnonce(annonce)"  slot="end" ><ion-icon color="dark" name="eye"></ion-icon></ion-button>
+                    </ion-item>
+                  </ion-card-content>
+                </ion-card>
+          </ion-list>
+  
+       </ion-col>  
+     </ion-row>
+  
+  </ion-content>
+  

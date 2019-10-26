@@ -8,13 +8,15 @@ const HttpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class AnnonceService {
+export class ConseilServiceService {
   
  url = "http://127.0.0.1:8000/api/";
 
   constructor(public http: HttpClient) { }
 
-  getAllAnnonces():Observable<{}> {
-    return this.http.get(this.url + 'liste/annonces',HttpOptions);
+  getAllConseil():Observable<{}> {
+    return this.http.get(this.url + 'liste/conseil',HttpOptions);
   }
 }
+
+

@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar color="success">
+      <ion-title>
+        Agroconnect
+      </ion-title>
+      <ion-icon  style="zoom: 2.0" slot="end" name="log-out"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+   <ion-row>
+     <ion-col size="12">
+        <ion-searchbar placeholder="recherche" inputmode="email" type="decimal" (ionChange)="onSearchChange($event)" [debounce]="250"></ion-searchbar>
+     </ion-col>
+     <ion-col>
+        <ion-list>
+            <ion-card>
+                <img src=" ../../../assets/img/conseil.jpg "/>
+                <ion-card-content color="light">
+            
+                  <ion-row>
+                    <ion-col  style="text-align: center;">
+                   
+                    <b> libelle {{ annonce?.produit?.sous_categorie?.libelle}} </b>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row style="text-align: center">
+                    <ion-col size="6" align-self-center>
+                      Date:  {{ annonce?.quantite}}
+                    </ion-col>
+                    <!-- <ion-col sizé="6" align-self-end>
+                      Prix Unitaire {{ annonce?.prix_unitaire}} CFA
+                    </ion-col> -->
+                    
+                  </ion-row>
+                  <ion-item>
+                      <ion-button color="dark" fill="outline"  (click)="openAnnonce(annonce)"  slot="end" ><ion-icon color="dark" name="eye"></ion-icon></ion-button>
+                  </ion-item>
+                </ion-card-content>
+              </ion-card>
+        </ion-list>
+
+     </ion-col>  
+   </ion-row>
+
+</ion-content>
